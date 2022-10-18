@@ -16,15 +16,8 @@ class RichestPerson
 
     public function getRichestPerson()
     {
-        $this->db->query('SELECT * FROM RichestPeople');
+        $this->db->query('SELECT * FROM RichestPeople ORDER BY Networth DESC;');
         return $this->db->resultSet();
-    }
-
-    public function getSingleRichestPerson($id)
-    {
-        $this->db->query('SELECT * FROM RichestPeople WHERE Id = :Id');
-        $this->db->bind(':Id', $id, PDO::PARAM_INT);
-        return $this->db->single();
     }
 
     public function deleteRichestPerson($id)
