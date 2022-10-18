@@ -15,7 +15,7 @@ class RichestPeople extends Controller
 
     public function index()
     {
-        $records = $this->richestpeopleModel->getRichestPeople();
+        $records = $this->richestpeopleModel->getRichestPerson();
 
         $rows = '';
 
@@ -41,7 +41,7 @@ class RichestPeople extends Controller
 
     public function delete($id = null)
     {
-        $this->richestpeopleModel->deleteRichestPeople($id);
+        $this->richestpeopleModel->deleteRichestPerson($id);
         header("Location: " . URLROOT . "/richestpeople/index");
     }
 }

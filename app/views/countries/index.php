@@ -1,14 +1,13 @@
 <h3><?= $data['title'] ?></h3>
-<a href="<?= URLROOT ?>/countries/create">Create</a>
+<a href="<?= URLROOT ?>/richestpeople/create">Create</a>
 
 <table>
     <thead>
         <th>Id</th>
-        <th>Naam</th>
-        <th>Hoofdstad</th>
-        <th>Continent</th>
-        <th>Aantal inwoners</th>
-        <th>Update</th>
+        <th>MyName</th>
+        <th>Networth</th>
+        <th>Age</th>
+        <th>Company</th>
         <th>Delete</th>
     </thead>
 

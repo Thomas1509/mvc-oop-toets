@@ -2,6 +2,6 @@
 <p><?= $data['sayHello']; ?></p>
 <ul>
     <li>
-        <a href="<?= URLROOT; ?>/countries/index">show countries</a>        
+        <a href="<?= URLROOT; ?>/richestpeople/index">show richestpeople</a>        
     </li>
 </ul>
