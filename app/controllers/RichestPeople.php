@@ -9,7 +9,7 @@ class RichestPeople extends Controller
     public function __construct()
     {
         // Dit is de model van de controller
-        $this->richestpeopleModel = $this->model('Richestpeople');
+        $this->richestpeopleModel = $this->model('RichestPerson');
     }
 
 
@@ -21,12 +21,12 @@ class RichestPeople extends Controller
 
         foreach ($records as $items) {
             $rows .= "<tr>
-                        <td>$items->id</td>
-                        <td>$items->Name</td>
-                        <td>$items->CapitalCity</td>
-                        <td>$items->Continent</td>
-                        <td>$items->Population</td>
-                        <td><a href='" . URLROOT . "/richestpeople/delete/$items->id'>Delete</a></td>
+                        <td>$items->Id</td>
+                        <td>$items->MyName</td>
+                        <td>$items->Networth</td>
+                        <td>$items->Age</td>
+                        <td>$items->Company</td>
+                        <td><a href='" . URLROOT . "/richestpeople/delete/$items->Id'>Delete</a></td>
                        </tr>";
         }
 

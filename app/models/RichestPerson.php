@@ -14,7 +14,7 @@ class RichestPerson
         $this->db = new Database();
     }
 
-    public function getRichestPeople()
+    public function getRichestPerson()
     {
         $this->db->query('SELECT * FROM RichestPeople');
         return $this->db->resultSet();
@@ -22,15 +22,15 @@ class RichestPerson
 
     public function getSingleRichestPerson($id)
     {
-        $this->db->query('SELECT * FROM RichestPeople WHERE id = :id');
-        $this->db->bind(':id', $id, PDO::PARAM_INT);
+        $this->db->query('SELECT * FROM RichestPeople WHERE Id = :Id');
+        $this->db->bind(':Id', $id, PDO::PARAM_INT);
         return $this->db->single();
     }
 
     public function deleteRichestPerson($id)
     {
-        $this->db->query("DELETE FROM RichestPeople WHERE id = :id");
-        $this->db->bind(':id', $id, PDO::PARAM_INT);
+        $this->db->query("DELETE FROM RichestPeople WHERE Id = :Id");
+        $this->db->bind(':Id', $id, PDO::PARAM_INT);
         return $this->db->execute();
     }
 }

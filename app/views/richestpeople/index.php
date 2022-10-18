@@ -1,5 +1,4 @@
 <h3><?= $data['title'] ?></h3>
-<a href="<?= URLROOT ?>/richestpeople/create">Create</a>
 
 <table>
     <thead>
